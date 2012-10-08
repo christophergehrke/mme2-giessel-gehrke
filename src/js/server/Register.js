@@ -158,13 +158,13 @@ function checkForIllegalArguments(data) {
 	if (!data.username.match(/^.{5,12}$/)) {
 		illegalArguments["username"] = "Dein Benutzername ist zu kurz. Benutzernamen müssen aus 5 bis 12 Zeichen bestehen.";
 	}
-	else if (!data.username.match(/^[a-zA-Z0-9äßú]{5,12}$/)) {
+	else if (!data.username.match(/^[a-zA-Z0-9]{5,12}$/)) {
 		illegalArguments["username"] = "Dein Benutzername enthält ungültige Zeichen. Bitte verwende nur die alphanumerischen Zeichen (A-Z und 0-9).";
 	}
 	if (!data.mail.match(/^[a-zA-Z][\w\.-]*[a-zA-Z0-9]@((\w+\+*\-*)+\.?)*[\w-]+\.[a-z]{2,6}$/)) {
 		illegalArguments["mail"] = "Du hast eine ungültige E-Mail-Adresse angegeben.";
 	}
-	if (!data.password.match(/^[a-z0-9]{64}$/)) {
+	if (!data.password.match(/^[a-f0-9]{64}$/)) {
 		illegalArguments["password"] = "Dein Passwort ist zu kurz. Passwörter müssen aus mindestens 5 Zeichen bestehen.";
 	}
 	return illegalArguments;
