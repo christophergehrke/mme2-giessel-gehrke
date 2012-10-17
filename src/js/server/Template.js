@@ -46,6 +46,7 @@ contentRegister = function() {
 	return html;
 };
 
+
 /**
  * Liefert die Fehler404-HTML-Seite als String zurück
  * @return {String} html Die Fehler404-HTML-Seite
