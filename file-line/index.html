@@ -3,10 +3,10 @@
 
 <head>
 <meta charset="UTF-8">
+
 	<title>File Line</title>
 	<link rel="stylesheet" href="css/main.css" type="text/css" media="screen" />
-	
-    <!--script src="../socialHelping/js/AddButtonHandler.js"> </script-->
+    <script src="js/h5utils.js"> </script>
 </head>
 
 <body>
@@ -27,16 +27,31 @@
      	<div id="top_name">
      		<p> Verzeichnisstruktur </p>
 	  	</div>
+        <style>
+		#holder { border: 10px dashed #ccc; width: 100px; min-height: 100px; margin: 20px auto;}
+		#holder.hover { border: 10px dashed #0c0; }
+		#holder img { display: block; margin: 10px auto; }
+		#holder p { margin: 10px; font-size: 14px; }
+		progress { width: 100%; }
+		progress:after { content: '%'; }
+		.fail { background: #c00; padding: 2px; color: #fff; }
+		.hidden { display: none !important;}
+	</style>
+<div id="holder">
+  </div> 
+  <p id="upload" class="hidden"><label>Drag & drop not supported, but you can still upload via this input field:<br><input type="file"></label></p>
+  <p id="filereader">File API & FileReader API not supported</p>
+  <p id="formdata">XHR2's FormData is not supported</p>
+  <p id="progress">XHR2's upload progress isn't supported</p>
+  <p>Upload progress: <progress id="uploadprogress" min="0" max="100" value="0">0</progress></p>
+  <p>Drag an image from your desktop on to the drop zone above to see the browser both render the preview, but also upload automatically to this server.</p>
+</article>
  		
-        <article>
+        <!--article>
         Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. 
-        </article>
-        
-        <div>
-        
-        </div>
-        
-	</section>
+        </article-->
+        <article>
+  </section>
     
 <section id="timeline">
 <p> Timeline</p>
@@ -52,4 +67,8 @@
 	</footer>
 <!-- Free template created by http://freehtml5templates.com -->
 </body>
+
+    <footer>
+        <script src="js/dragndrop.js"></script>
+    </footer>
 </html>
